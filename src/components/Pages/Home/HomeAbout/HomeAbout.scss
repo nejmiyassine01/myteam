@@ -15,7 +15,7 @@
         margin: auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
         padding: 20px;
 
         @media (max-width: 1024px) {
@@ -42,7 +42,7 @@
             background-color: #F67E7E;
 
             @media (max-width: 1024px) {
-                top: -10px;
+                top: 0px;
             }
         }
 

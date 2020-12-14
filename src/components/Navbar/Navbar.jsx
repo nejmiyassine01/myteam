@@ -33,7 +33,6 @@ function Navbar() {
                         ))}
                     </ul>
                 </div>
-            
             </div>
             
             <nav className={sidebar ? 'navbar_menu active' : 'navbar_menu' }>

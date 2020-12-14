@@ -6,6 +6,11 @@
     color: #fff;
     padding: 30px 20px 0;
 
+    @media (max-width: 991px) {
+        height: 50px;
+        padding: 10px 20px 10px;
+    }
+
     &_container {
         margin: auto;
         display: flex;
