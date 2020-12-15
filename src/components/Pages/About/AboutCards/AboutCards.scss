@@ -1,0 +1,140 @@
+.cards {
+    background-color: #004047;
+    padding: 70px 0px;
+    overflow: hidden;
+    position: relative;
+    
+    &_image {
+
+        &--1 {
+            position: absolute;
+            top: 0;
+            left: -100px;
+
+            @media (max-width: 650px) {
+                top: 95%;
+                left: -120px;
+            }
+        }
+
+        &--2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    
+    &_container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &_title {
+        text-align: center;
+        z-index: 20;
+
+        & h2 {
+            font-size: 40px;
+        }
+    }
+
+    &_boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+        padding: 50px 0;
+
+        @media (max-width: 920px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 650px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
+    }
+
+    &_box {
+        height: 250px;
+
+        &--front, &--back {
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            @media (max-width: 650px) {
+                padding: 20px 0;
+            }
+
+            & h3 {
+                color: #79C8C7;
+                font-size: 20px;
+                margin: 10px 0;
+                letter-spacing: 1px;
+            }
+
+            & svg {
+                position: absolute;
+                font-size: 40px;
+                transition: all .3s ease-in-out;
+            }
+        }
+        
+        &--front {
+            background-color: rgba(0, 0, 0, 0.2);
+            
+            & img {
+                height: 100px;
+                width: 100px;
+                border: 2px solid #79C8C7;
+                border-radius: 50%;
+            }
+
+            & h4 {
+                margin: 0 0 10px 0;
+                letter-spacing: 1px;
+            }
+            
+            & svg {
+                bottom: -20px;
+                fill: #F67E7E;
+
+                &:hover {
+                    fill: #79C8C7;
+                }
+            }
+        }
+
+        &--back {
+            background-color: rgba(0, 0, 0, 0.5);
+
+            & svg {
+                fill: #79C8C7;
+                bottom: -25px;
+                font-size: 50px;
+                
+                &:hover {
+                    fill: #F67E7E;
+                }
+            }
+
+            & p {
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &_links {
+        margin-top: 10px;
+
+        & a {
+            margin: 20px;
+        }
+    }
+}

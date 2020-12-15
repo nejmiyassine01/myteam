@@ -1,0 +1,71 @@
+.aboutclients {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #012F34;
+    overflow: hidden;
+    position: relative;
+
+    @media (max-width: 780px) {
+        padding: 70px 0;
+        height: auto;
+    }
+
+    &_container {
+        width: 90%;
+        margin: 0 auto;
+
+        & h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+
+            @media (max-width: 500px) {
+                font-size: 30px;
+            }
+
+            @media (max-width: 350px) {
+                font-size: 20px;
+            }
+        }
+        
+    }
+
+    &_images {
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media (max-width: 780px) {
+                top: -100px;
+                left: -100px;
+            }
+
+            @media (max-width: 500px) {
+                top: -130px;
+            }
+        }
+    }
+
+    &_brands {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        place-items: center;
+
+        @media (max-width: 780px) {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 50px;
+        }
+
+        & img {
+            width: 80%;
+
+            @media (max-width: 780px) {
+                width: 50%;
+            }
+        }
+    }
+    
+}
